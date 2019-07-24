@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Spring Boot Data Example</title>
+    <link rel="stylesheet" th:href="@{webjars/bootstrap/4.2.1/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" th:href="@{color.css}"/>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+</head>
+<body>
+<main role = "main"  class="container">
+    <div class="starter-template">
+        <br>
+        <h1>Spring Boot Web Thm. Example</h1>
+    </div>
+
+    <div>
+        <ol>
+            <!--/*@thymesVar id="Kitaplar" type=""*/-->
+            <li th:each="kitap : ${Kitaplar}" th:text="${kitap.name}"></li>
+        </ol>
+    </div>
+</main>
+    <script type="text/javascript" th:src="@{webjars/bootstrap/4.2.1/js/bootstrap.min.js}"></script>
+
+</body>
+</html>
